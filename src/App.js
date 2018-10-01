@@ -7,10 +7,12 @@ class App extends Component {
   this.state = { input:"", list:[] }
   this.add = this.add.bind(this)
   this.list = this.list.bind(this)
+  this.strike = this.strike.bind(this)
   }
 
   add(textInput){
     this.setState({input: textInput})
+
     console.log(this.state)
   }
 
@@ -20,6 +22,10 @@ class App extends Component {
     list.push(this.state.input)
     this.setState({input:"", list})
     console.log(this.state)
+  }
+
+  strike(item){
+    item.classlist.add("strikeThrough")
   }
 
   render() {
@@ -33,7 +39,7 @@ class App extends Component {
 
       <ul>
         {
-          this.state.list.map(el => <li>{el}</li>)
+          this.state.list.map(el => <li onClick={ e => this.stike(e.target)}>{el}</li>)
         }
       </ul>
       </div>
