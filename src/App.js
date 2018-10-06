@@ -74,7 +74,7 @@ class App extends Component {
     return (
       <div className="App">
         <h1>TO DO LIST:</h1>
-        <input className="input" placeholder="enter to do" type="text"
+        <input className="input" placeholder=" enter to do" type="text"
           onChange={(event) => this.handleChange(event.target.value)}
           value={this.state.input}
           ></input>
