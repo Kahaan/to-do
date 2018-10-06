@@ -12,8 +12,6 @@ class App extends Component {
 
   add(textInput){
     this.setState({input: textInput})
-
-    console.log(this.state)
   }
 
   list(event){
@@ -39,7 +37,7 @@ class App extends Component {
 
       <ul>
         {
-          this.state.list.map(el => <li onClick={ e => this.stike(e.target)}>{el}</li>)
+          this.state.list.map((el,idx) => <li key={idx}>{el}</li>)
         }
       </ul>
       </div>
