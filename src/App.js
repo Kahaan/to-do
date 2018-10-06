@@ -32,7 +32,7 @@ class App extends Component {
     return (
       <div className="App">
         <h1>TO DO LIST: MVP</h1>
-        <input className="input" onChange={e => this.add(e.target.value)} type="text" placeholder="enter to do"></input>
+        <input className="input" onChange={e => this.add(e.target.value)} type="text" value={this.state.input} placeholder="enter to do"></input>
         <br />
         <br />
         <button onClick={this.list}>Add Todo</button>
